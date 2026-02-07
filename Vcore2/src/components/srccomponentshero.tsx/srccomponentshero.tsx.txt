@@ -1,0 +1,16 @@
+export default function Hero() {
+  return (
+    <section className="relative bg-[#f9fafb] py-20">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <img 
+          src="https://eu.chat-img.sintra.ai/3e746b2a-4583-43ab-be27-3ffe601280b0/8b60ac41-e8ba-491b-b01f-1e53437db967/image.png?w=1200&h=896" 
+          alt="Vcore website hero background" 
+          className="w-full rounded-xl mb-8 shadow-lg border border-gray-200" 
+        />
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">Retention-Focused Copywriting for E-Commerce Brands</h1>
+        <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">We create email flows, post-purchase sequences, and retention campaigns that increase repeat purchases and customer lifetime value.</p>
+        <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg text-base transition">Get in touch</a>
+      </div>
+    </section>
+  );
+}

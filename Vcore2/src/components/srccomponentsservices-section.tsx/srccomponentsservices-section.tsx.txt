@@ -1,0 +1,26 @@
+export default function ServicesSection() {
+  return (
+    <section className="bg-white py-20 border-t border-gray-100">
+      <div className="max-w-5xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Services</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-[#f9fafb] rounded-lg p-6 shadow-sm border border-gray-200 flex flex-col items-center">
+            <img src="https://eu.chat-img.sintra.ai/3e746b2a-4583-43ab-be27-3ffe601280b0/2db57c0a-8fa4-4d0a-8468-14e4af4eb074/image.png?w=1200&h=896" alt="Email Flows" className="w-20 h-20 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Email Flows</h3>
+            <p className="text-gray-700 text-center">Strategic email sequences to drive repeat purchases and maximize CLV.</p>
+          </div>
+          <div className="bg-[#f9fafb] rounded-lg p-6 shadow-sm border border-gray-200 flex flex-col items-center">
+            <img src="https://eu.chat-img.sintra.ai/3e746b2a-4583-43ab-be27-3ffe601280b0/2db57c0a-8fa4-4d0a-8468-14e4af4eb074/image.png?w=1200&h=896" alt="Post-Purchase Sequences" className="w-20 h-20 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Post-Purchase Sequences</h3>
+            <p className="text-gray-700 text-center">Nurture new customers and increase lifetime value with tailored post-purchase messaging.</p>
+          </div>
+          <div className="bg-[#f9fafb] rounded-lg p-6 shadow-sm border border-gray-200 flex flex-col items-center">
+            <img src="https://eu.chat-img.sintra.ai/3e746b2a-4583-43ab-be27-3ffe601280b0/2db57c0a-8fa4-4d0a-8468-14e4af4eb074/image.png?w=1200&h=896" alt="Retention Campaigns" className="w-20 h-20 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Retention Campaigns</h3>
+            <p className="text-gray-700 text-center">Ongoing retention strategies and campaigns to turn customers into loyal advocates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

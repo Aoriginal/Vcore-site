@@ -1,0 +1,15 @@
+export const metadata = {
+  title: "About | Vcore",
+  description: "Learn about Vcore's approach to retention-focused copywriting for e-commerce brands. Our process, credibility, and why we focus on customer lifetime value."
+};
+
+export default function AboutPage() {
+  return (
+    <main className="max-w-3xl mx-auto px-6 py-20">
+      <h1 className="text-4xl font-bold text-gray-900 mb-8">About Vcore</h1>
+      <p className="text-gray-700 mb-6">Vcore was founded to help e-commerce brands stop leaving money on the table. We specialize in retention-focused copywriting—creating strategic email flows, post-purchase sequences, and ongoing campaigns that turn one-time buyers into loyal customers.</p>
+      <p className="text-gray-700 mb-6">Our approach is data-driven, results-focused, and built on proven frameworks. We partner with brands ready to invest in long-term customer value, not just quick wins.</p>
+      <p className="text-gray-700">Ready to increase your repeat purchase rate and CLV? <a href="/contact" className="text-blue-600 underline">Let's talk.</a></p>
+    </main>
+  );
+}

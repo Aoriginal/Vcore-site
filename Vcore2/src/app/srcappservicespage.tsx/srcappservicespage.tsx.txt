@@ -1,0 +1,29 @@
+export const metadata = {
+  title: "Services | Vcore",
+  description: "Retention-focused copywriting services for e-commerce brands: email flows, post-purchase sequences, and ongoing retention campaigns."
+};
+
+export default function ServicesPage() {
+  return (
+    <main className="max-w-4xl mx-auto px-6 py-20">
+      <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>
+      <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="bg-[#f9fafb] rounded-lg p-6 shadow-sm border border-gray-200 flex flex-col items-center">
+          <h2 className="text-xl font-semibold mb-2">Email Flows</h2>
+          <p className="text-gray-700 text-center">Strategic email sequences to drive repeat purchases and maximize CLV.</p>
+        </div>
+        <div className="bg-[#f9fafb] rounded-lg p-6 shadow-sm border border-gray-200 flex flex-col items-center">
+          <h2 className="text-xl font-semibold mb-2">Post-Purchase Sequences</h2>
+          <p className="text-gray-700 text-center">Nurture new customers and increase lifetime value with tailored post-purchase messaging.</p>
+        </div>
+        <div className="bg-[#f9fafb] rounded-lg p-6 shadow-sm border border-gray-200 flex flex-col items-center">
+          <h2 className="text-xl font-semibold mb-2">Retention Campaigns</h2>
+          <p className="text-gray-700 text-center">Ongoing retention strategies and campaigns to turn customers into loyal advocates.</p>
+        </div>
+      </div>
+      <div className="text-center">
+        <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg text-base transition">Let's discuss your retention goals</a>
+      </div>
+    </main>
+  );
+}

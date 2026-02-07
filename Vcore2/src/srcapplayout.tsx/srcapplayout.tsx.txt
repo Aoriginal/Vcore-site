@@ -1,0 +1,39 @@
+import "./globals.css";
+import Header from "@/components/header";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Vcore | Retention-Focused Copywriting for E-Commerce Brands",
+  description: "Retention-focused copywriting for scaling e-commerce brands. We create email flows, post-purchase sequences, and retention campaigns that increase repeat purchases and customer lifetime value.",
+  keywords: ["retention copywriting", "e-commerce", "email flows", "customer lifetime value", "repeat purchases"],
+  openGraph: {
+    title: "Vcore | Retention-Focused Copywriting for E-Commerce Brands",
+    description: "Retention-focused copywriting for scaling e-commerce brands. We create email flows, post-purchase sequences, and retention campaigns that increase repeat purchases and customer lifetime value.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Vcore",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vcore | Retention-Focused Copywriting for E-Commerce Brands",
+    description: "Retention-focused copywriting for scaling e-commerce brands. We create email flows, post-purchase sequences, and retention campaigns that increase repeat purchases and customer lifetime value.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body className="bg-[#f9fafb] text-[#18181b] font-sans min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <footer className="bg-white border-t border-gray-200 py-6 text-center text-sm text-gray-500 mt-12">
+          © {new Date().getFullYear()} Vcore. Retention-focused copywriting for e-commerce brands.
+        </footer>
+      </body>
+    </html>
+  );
+}

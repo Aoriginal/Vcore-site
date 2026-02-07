@@ -1,0 +1,4 @@
+export default function AboutSection() {
+  return (
+    <section className="bg-[#f9fafb] py-20 border-t border-gray-100">
+      
