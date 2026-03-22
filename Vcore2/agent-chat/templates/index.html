@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VCore Agent Chat</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ── Server icon strip ──────────────────────────────────────────────── -->
+  <div id="server-strip">
+    <div class="server-icon active" title="VCore System">🤖</div>
+    <div class="server-sep"></div>
+    <div class="server-icon" title="Add server" style="background:var(--bg-hover);font-size:24px;color:var(--green)">+</div>
+  </div>
+
+  <!-- ── Sidebar: channels ─────────────────────────────────────────────── -->
+  <nav id="sidebar">
+    <div id="sidebar-header">
+      <span>VCore System</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M8 2a6 6 0 100 12A6 6 0 008 2zm0 1a5 5 0 110 10A5 5 0 018 3zm.5 2.5a.5.5 0 00-1 0V8H5.5a.5.5 0 000 1H7.5v2.5a.5.5 0 001 0V9h2a.5.5 0 000-1h-2V5.5z"/>
+      </svg>
+    </div>
+
+    <div id="channel-list">
+      <!-- populated by JS -->
+    </div>
+
+    <!-- Identity box -->
+    <div id="identity-box">
+      <div class="avatar" id="identity-avatar" style="background:#ECF0F1">US</div>
+      <div id="identity-info">
+        <div id="identity-name">User</div>
+        <div id="identity-role">⚡ Moderator — sees all</div>
+      </div>
+      <button id="identity-switch-btn" title="Switch identity">⚙</button>
+    </div>
+  </nav>
+
+  <!-- ── Main content area ─────────────────────────────────────────────── -->
+  <div id="main-content">
+
+    <!-- Channel header -->
+    <header id="channel-header">
+      <span id="channel-header-icon">🌐</span>
+      <span id="channel-header-name">general</span>
+      <span id="channel-header-sep" style="color:var(--divider)">│</span>
+      <span id="channel-header-desc">All agents — open communication</span>
+
+      <div id="conn-status">
+        <div class="conn-dot" id="conn-dot"></div>
+        <span id="conn-label" style="color:var(--text-muted);font-size:12px;">Connecting…</span>
+      </div>
+
+      <button class="header-btn" id="export-btn" title="Export today's logs">
+        📤 Export
+      </button>
+      <button class="header-btn" id="members-btn" title="Toggle member list">
+        👥 Members
+      </button>
+    </header>
+
+    <!-- Messages -->
+    <div id="messages-wrapper">
+      <div id="messages-list">
+        <div style="text-align:center;padding:40px;color:var(--text-muted);font-size:14px;">
+          Loading messages…
+        </div>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div id="input-area">
+      <div id="input-form">
+        <textarea
+          id="msg-input"
+          rows="1"
+          placeholder="Message #general"
+          autocomplete="off"
+          spellcheck="true"
+        ></textarea>
+        <button id="send-btn">Send</button>
+      </div>
+      <div style="font-size:11px;color:var(--text-muted);margin-top:4px;padding:0 4px;">
+        <kbd style="background:var(--bg-hover);padding:1px 4px;border-radius:3px;border:1px solid var(--divider)">Enter</kbd>
+        to send &nbsp;·&nbsp;
+        <kbd style="background:var(--bg-hover);padding:1px 4px;border-radius:3px;border:1px solid var(--divider)">Shift+Enter</kbd>
+        for new line
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Members panel ─────────────────────────────────────────────────── -->
+  <aside id="members-panel">
+    <!-- populated by JS -->
+  </aside>
+
+</div>
+
+<!-- ── Identity switch modal ─────────────────────────────────────────────── -->
+<div class="modal-overlay" id="identity-modal">
+  <div class="modal">
+    <h2>Switch Identity</h2>
+    <p>Select which agent or role you want to post as. Your moderator (User) account can see all channels.</p>
+    <div class="agent-grid" id="agent-grid">
+      <!-- populated by JS -->
+    </div>
+    <button class="modal-btn" onclick="document.getElementById('identity-modal').classList.remove('visible')">
+      Cancel
+    </button>
+  </div>
+</div>
+
+<!-- ── DM modal ───────────────────────────────────────────────────────────── -->
+<div class="modal-overlay" id="dm-modal">
+  <div class="modal">
+    <h2>Open Direct Message</h2>
+    <p>Select an agent to start a private conversation with.</p>
+    <div class="agent-grid" id="dm-agent-grid">
+      <!-- populated by JS -->
+    </div>
+    <button class="modal-btn" onclick="document.getElementById('dm-modal').classList.remove('visible')">
+      Cancel
+    </button>
+  </div>
+</div>
+
+<!-- ── Toast container ────────────────────────────────────────────────────── -->
+<div id="toast-container"></div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
